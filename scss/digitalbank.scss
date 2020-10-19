@@ -1,0 +1,22 @@
+.digitalbank {
+    padding: 75px 0;
+    background: #FFE9F4;
+
+    &__wrap {
+    }
+
+    &__caption {
+        text-align: center;
+    }
+
+    &__item-wrapp{
+        display: flex;
+    }
+
+    &__item {
+       
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}

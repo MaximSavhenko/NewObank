@@ -604,3 +604,16 @@ select {
   width: 422px;
   border-top: 5px dotted #f8785e;
 }
+.digitalbank {
+  padding: 75px 0;
+  background: #FFE9F4;
+}
+.digitalbank__caption {
+  text-align: center;
+}
+.digitalbank__item-wrapp {
+  display: flex;
+}
+.digitalbank__item p {
+  margin-bottom: 20px;
+}
