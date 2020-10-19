@@ -57,7 +57,7 @@ h3, h2 {
 }
 
 .container {
-    max-width: 930px;
+    max-width: 1042px;
     padding: 0 15px;
     margin: 0 auto;
     position: relative;
@@ -233,6 +233,8 @@ select {
 @import "cashback.scss";
 @import "freecard.scss";
 @import "digitalbank.scss";
+@import "footer.scss";
+@import "why-digitalbank.scss";
 
 
 

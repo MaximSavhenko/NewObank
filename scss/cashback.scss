@@ -1,3 +1,5 @@
+@import "mixins.scss";
+
 .cashback {
 
     &__wrap {
@@ -8,6 +10,16 @@
     &__text-block {
         position: relative;
         width: 50%;
+        padding-top: 30px;
+
+        span {
+            display: block;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
         &::before {
             content: "";
             display: block;
@@ -20,6 +32,7 @@
     }
 
     &__caption {
+
     }
 
     &__descr {
@@ -27,5 +40,8 @@
 
     &__img {
         width: 50%;
+        img {
+            width: 100%;
+        }
     }
 }

@@ -1,6 +1,9 @@
+@import "mixins.scss";
+
 .creditLimit {
     padding-top: 67px;
     &__wrap {
+        padding-top: 120px;
         border-top: 1px solid #F98972;
         display: flex;
         align-items: center;
@@ -9,16 +12,15 @@
     &__img {
         width: 50%;
         img {
-            max-width: 600px;
+            width: 100%;
         }
     }
 
     &__text-block {
-        position: relative;
         padding-top: 30px;
+        position: relative;
         width: 50%;
         line-height: 24px;
-        padding: 30px 200px 0 0;
         &::before {
             content: "";
             display: block;
