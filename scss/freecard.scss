@@ -1,7 +1,6 @@
-.creditLimit {
-    padding-top: 67px;
+.freecard {
+
     &__wrap {
-        border-top: 1px solid #F98972;
         display: flex;
         align-items: center;
     }
@@ -15,10 +14,7 @@
 
     &__text-block {
         position: relative;
-        padding-top: 30px;
         width: 50%;
-        line-height: 24px;
-        padding: 30px 200px 0 0;
         &::before {
             content: "";
             display: block;
@@ -31,14 +27,9 @@
     }
 
     &__caption {
-        h3 {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 38px;
-            color: #30394A;
-        }
     }
 
     &__descr {
     }
 }
+

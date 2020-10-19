@@ -63,7 +63,7 @@ h3, h2 {
     position: relative;
   }
 
-  .--headerContainer {
+  .--Container {
       max-width: 1300px;
   }
 
@@ -230,6 +230,10 @@ select {
 @import "header.scss";
 @import "hero.scss";
 @import "creaditLimit.scss";
+@import "cashback.scss";
+@import "freecard.scss";
+
+
 
 
 
