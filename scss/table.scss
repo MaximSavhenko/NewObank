@@ -16,43 +16,77 @@
 
     &__table-wrap {
         margin-bottom: 24px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 232px;
+            height: 100%;
+            z-index: -1;
+            border-radius: 40px;
+            border: 2px solid #E976AC;
+            background: linear-gradient(0deg, #E976AC, #E976AC);
+            box-shadow: 0px 4px 8px rgba(112, 112, 112, 0.15);
+        }
+    
         table {
             text-align: left;
+            
         }
         tr {
             height: 82px;
             vertical-align: middle;
-            border-bottom: 1px solid #F3F3F3;
         }
         th {
-            margin-right: 62px;
             border-bottom: 1px solid #F3F3F3;
             width: 20%;
-            
+            vertical-align: middle;
+            height: 70px;
+
+            &:last-child:before {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 34px;
+            background-image: url(../img/svg/Logo_svg.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            } 
         }
         td{
             border-bottom: 1px solid #F3F3F3;
             width: 20%;
+            vertical-align: middle;
         }
 
     }
 
     &__icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
         width: 32px;
         height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        &:first-child{
-            background-color: #000;
-        }
-        &:nth-child(2) {
-            background: #5DBA45;
-        }
-        &:last-child{
-            background: #EF002F;
-        }
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(../img/svg/bank1.svg);
+    }
+
+    .--icon {
+        background-image: url(../img/svg/bank2.svg);
+    }
+
+    .--icon_1 {
+        background-image: url(../img/svg/bank3.svg);
+
+    }
+
+    &__logo {
+          
     }
 
     &__footnote {
@@ -66,19 +100,6 @@
             line-height: 10px;
             margin-bottom: 8px;
         }
-    }
-
-    &__odd {
-        
-
-    }
-
-    &__even {
-
-        tr {
-            border-bottom: 1px solid #F3F3F3;
-        }
-        
     }
 
     &__pdf {

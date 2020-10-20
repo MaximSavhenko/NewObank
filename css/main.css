@@ -33,6 +33,27 @@
   font-style: normal;
   font-display: swap;
 }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -682,6 +703,20 @@ select {
 }
 .table__table-wrap {
   margin-bottom: 24px;
+  position: relative;
+}
+.table__table-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 232px;
+  height: 100%;
+  z-index: -1;
+  border-radius: 40px;
+  border: 2px solid #E976AC;
+  background: linear-gradient(0deg, #E976AC, #E976AC);
+  box-shadow: 0px 4px 8px rgba(112, 112, 112, 0.15);
 }
 .table__table-wrap table {
   text-align: left;
@@ -689,33 +724,44 @@ select {
 .table__table-wrap tr {
   height: 82px;
   vertical-align: middle;
-  border-bottom: 1px solid #F3F3F3;
 }
 .table__table-wrap th {
-  margin-right: 62px;
   border-bottom: 1px solid #F3F3F3;
   width: 20%;
+  vertical-align: middle;
+  height: 70px;
+}
+.table__table-wrap th:last-child:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 34px;
+  background-image: url(../img/svg/Logo_svg.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
 .table__table-wrap td {
   border-bottom: 1px solid #F3F3F3;
   width: 20%;
+  vertical-align: middle;
 }
 .table__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
   width: 32px;
   height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/svg/bank1.svg);
 }
-.table__icon:first-child {
-  background-color: #000;
+.table .--icon {
+  background-image: url(../img/svg/bank2.svg);
 }
-.table__icon:nth-child(2) {
-  background: #5DBA45;
-}
-.table__icon:last-child {
-  background: #EF002F;
+.table .--icon_1 {
+  background-image: url(../img/svg/bank3.svg);
 }
 .table__clarification span {
   display: block;
@@ -723,9 +769,6 @@ select {
   font-weight: 400;
   line-height: 10px;
   margin-bottom: 8px;
-}
-.table__even tr {
-  border-bottom: 1px solid #F3F3F3;
 }
 .table__pdf a {
   font-size: 18px;
