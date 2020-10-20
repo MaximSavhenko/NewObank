@@ -1,0 +1,46 @@
+@import "mixins.scss";
+
+
+.qrcode {
+    padding-bottom: 120px;
+    &__wrap {
+        padding: 15px 0;
+        border-top: 1px solid #F98972;
+        border-bottom: 1px solid #F98972;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33.3333%;
+        p {
+            font-size: 16px;
+            font-family: 'Roboto';
+            text-align: center;
+            line-height: 19px;
+        }
+    }
+
+    &__image {
+        text-align: center;
+        p {
+            width: 100px;
+            display: inline-flex;
+        }
+        a {
+            width: 147px;
+            display: block;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+}
+
+

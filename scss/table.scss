@@ -1,0 +1,89 @@
+@import "mixins.scss";
+
+
+.table {
+    padding-top: 70px;
+    padding-bottom: 114px;
+    &__wrap {
+    }
+
+    &__caption {
+        text-align: center;
+        h3 {
+            margin-bottom: 63px;
+        }
+    }
+
+    &__table-wrap {
+        margin-bottom: 24px;
+        table {
+            text-align: left;
+        }
+        tr {
+            height: 82px;
+            vertical-align: middle;
+            border-bottom: 1px solid #F3F3F3;
+        }
+        th {
+            margin-right: 62px;
+            
+        }
+        td{
+
+        }
+
+    }
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        &:first-child{
+            background-color: #000;
+        }
+        &:nth-child(2) {
+            background: #5DBA45;
+        }
+        &:last-child{
+            background: #EF002F;
+        }
+    }
+
+    &__footnote {
+    }
+
+    &__clarification {
+        span {
+            display: block;
+            font-size: 8px;
+            font-weight: 400;
+            line-height: 10px;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__odd {
+        
+
+    }
+
+    &__even {
+
+        tr {
+            
+        }
+        
+    }
+
+    &__pdf {
+        a {
+            font-size: 18px;
+            color: #CC2D78;
+            font-weight: 500;
+        }
+        
+    }
+}

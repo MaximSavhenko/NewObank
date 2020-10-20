@@ -141,10 +141,40 @@
         position: absolute;
         top: 31px;
         right: -133px;
+        
+        ul {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+          &:hover {
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+            background-color: #fff;
+          } 
+          &::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            right: 0px;
+            width: 8px;
+            height: 8px;
+            border-bottom: 2px solid #3C474C;
+            border-left: 2px solid #3C474C;
+            transform: rotate(-45deg);
+            cursor: pointer;
+        }
+ 
+        }
         li {
             font-size: 16px;
+            cursor: pointer;
         }
-	}
+        
+    }
+    
+    &__language-items {
+
+        
+    }
 
 
     
