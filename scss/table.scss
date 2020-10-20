@@ -26,10 +26,13 @@
         }
         th {
             margin-right: 62px;
+            border-bottom: 1px solid #F3F3F3;
+            width: 20%;
             
         }
         td{
-
+            border-bottom: 1px solid #F3F3F3;
+            width: 20%;
         }
 
     }
@@ -73,7 +76,7 @@
     &__even {
 
         tr {
-            
+            border-bottom: 1px solid #F3F3F3;
         }
         
     }

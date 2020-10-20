@@ -693,6 +693,12 @@ select {
 }
 .table__table-wrap th {
   margin-right: 62px;
+  border-bottom: 1px solid #F3F3F3;
+  width: 20%;
+}
+.table__table-wrap td {
+  border-bottom: 1px solid #F3F3F3;
+  width: 20%;
 }
 .table__icon {
   width: 32px;
@@ -717,6 +723,9 @@ select {
   font-weight: 400;
   line-height: 10px;
   margin-bottom: 8px;
+}
+.table__even tr {
+  border-bottom: 1px solid #F3F3F3;
 }
 .table__pdf a {
   font-size: 18px;
