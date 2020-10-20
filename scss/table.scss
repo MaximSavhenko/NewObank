@@ -27,7 +27,7 @@
             z-index: -1;
             border-radius: 40px;
             border: 2px solid #E976AC;
-            background: linear-gradient(0deg, #E976AC, #E976AC);
+            background: rgba(233, 118, 172, .9);
             box-shadow: 0px 4px 8px rgba(112, 112, 112, 0.15);
         }
     
@@ -44,11 +44,14 @@
             width: 20%;
             vertical-align: middle;
             height: 70px;
+            &:last-child {
+                border: none;
+            }
 
             &:last-child:before {
             content: '';
             display: block;
-            width: 100px;
+            width: 230px;
             height: 34px;
             background-image: url(../img/svg/Logo_svg.svg);
             background-size: 100% 100%;
@@ -60,6 +63,11 @@
             border-bottom: 1px solid #F3F3F3;
             width: 20%;
             vertical-align: middle;
+            &:last-child {
+                border: none;
+                text-align: center;
+                color: #fff;
+            }
         }
 
     }
