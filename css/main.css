@@ -409,6 +409,9 @@ select {
   position: relative;
   z-index: 5;
 }
+.header__nav-item a:hover {
+  text-decoration: underline;
+}
 .header__nav-item:hover .header__submenu {
   opacity: 1;
   overflow: visible;

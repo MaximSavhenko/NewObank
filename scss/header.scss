@@ -133,6 +133,11 @@
         line-height: 19px;
         position: relative;
         z-index: 5;
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
         &:hover {
             .header__submenu {
                 opacity: 1;
