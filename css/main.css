@@ -302,6 +302,7 @@ select {
   height: 80px;
   display: flex;
   align-items: center;
+  padding-right: 180px;
 }
 .header__wrap-nav {
   width: 100%;
@@ -403,6 +404,32 @@ select {
 }
 .header__nav-item {
   font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  position: relative;
+  z-index: 5;
+}
+.header__nav-item:hover .header__submenu {
+  opacity: 1;
+  overflow: visible;
+  display: block;
+}
+.header__nav-item:last-child::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: -15px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #3C474C;
+  border-left: 2px solid #3C474C;
+  transform: rotate(-45deg);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.header__nav-item:hover:last-child::before {
+  transform: rotate(-230deg);
+  top: 7px;
 }
 @media (max-width: 1024px) {
   .header__nav-item {
@@ -411,36 +438,98 @@ select {
     font-weight: 500;
   }
 }
+.header__submenu {
+  padding: 34px 12px 12px 12px;
+  position: absolute;
+  top: -10px;
+  left: -12px;
+  right: 0;
+  overflow: hidden;
+  opacity: 0;
+  display: none;
+  z-index: -1;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 10px rgba(183, 183, 183, 0.25);
+  border-radius: 8px;
+  width: 200px;
+  transition: all 0.3s;
+}
+.header__submenu li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #30394A;
+  margin-bottom: 8px;
+}
 .header__language {
   position: absolute;
   top: 31px;
-  right: -133px;
+  right: 0;
+  font-weight: 500;
 }
 .header__language ul {
-  width: 100px;
-  height: 100px;
   border-radius: 5px;
+  padding: 0 5px;
+  transition: all 0.2s;
 }
 .header__language ul:hover {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
-.header__language ul::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  right: 0px;
-  width: 8px;
-  height: 8px;
-  border-bottom: 2px solid #3C474C;
-  border-left: 2px solid #3C474C;
-  transform: rotate(-45deg);
-  cursor: pointer;
+.header__language ul:hover a {
+  opacity: 1;
+  overflow: visible;
+}
+.header__language ul:hover li:last-child::after {
+  opacity: 1;
 }
 .header__language li {
   font-size: 16px;
   cursor: pointer;
 }
+.header__language-items {
+  position: relative;
+  padding: 0 30px;
+  padding-bottom: 20px;
+}
+.header__language-items:first-child::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #3C474C;
+  border-left: 2px solid #3C474C;
+  transform: rotate(-45deg);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.header__language-items:hover:first-child::before {
+  transform: rotate(-230deg);
+  top: 7px;
+}
+.header__language-items:last-child::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 34px;
+  top: -9px;
+  right: 0;
+  opacity: 0;
+  width: 20px;
+  height: 1px;
+  background-color: #30394a;
+}
+.header__language-items a {
+  opacity: 0;
+  overflow: hidden;
+}
+.header__language-items .open-lang {
+  opacity: 1;
+  overflow: visible;
+}
+
 .hero {
   padding-top: 100px;
   min-height: 100vh;
@@ -721,6 +810,9 @@ select {
 .table__table-wrap table {
   text-align: left;
 }
+.table__table-wrap table p {
+  margin-top: 10px;
+}
 .table__table-wrap tr {
   height: 82px;
   vertical-align: middle;
@@ -730,9 +822,14 @@ select {
   width: 20%;
   vertical-align: middle;
   height: 70px;
+  font-weight: 700;
+  font-size: 16px;
 }
 .table__table-wrap th:last-child {
   border: none;
+}
+.table__table-wrap th:nth-child(3), .table__table-wrap th:nth-child(4), .table__table-wrap th:nth-child(5) {
+  text-align: center;
 }
 .table__table-wrap th:last-child:before {
   content: "";
@@ -749,10 +846,20 @@ select {
   width: 20%;
   vertical-align: middle;
 }
+.table__table-wrap td:nth-child(2) {
+  font-size: 16px;
+}
+.table__table-wrap td:nth-child(3), .table__table-wrap td:nth-child(4), .table__table-wrap td:nth-child(5) {
+  text-align: center;
+  color: #fff;
+  color: #30394A;
+  font-size: 16px;
+}
 .table__table-wrap td:last-child {
   border: none;
   text-align: center;
   color: #fff;
+  font-size: 16px;
 }
 .table__icon {
   display: inline-block;
