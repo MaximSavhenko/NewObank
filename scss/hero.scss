@@ -6,14 +6,24 @@
   &__wrap {
     display: flex;
     flex-direction: column;
+    @include b(mobile) {
+
+    }
   }
 
   &__justDownload-wrap {
     display: flex;
+    @include b(mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__img {
     width: 50%;
+    @include b(mobile) {
+      width: 65%;
+    }
     img {
       width: calc(100% + 65px);
       margin-left: -65px;
@@ -26,13 +36,21 @@
 
   &__text {
     width: 50%;
-    padding: 0 35px
+    padding: 0 35px;
+    @include b(mobile) {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   &__title {
     text-align: center;
     span {
       color: #db6088;
+    }
+    @include b(mobile) {
+      order: 1;
     }
   }
 
@@ -55,6 +73,9 @@
     flex-direction: column;
     width: 100%;
     position: relative;
+    @include b(mobile) {
+      position: static;
+    }
     &::before {
       content: "";
       display: block;
@@ -63,6 +84,12 @@
       right: 0;
       width: 270px;
       border-top: 5px dotted #f8785e;
+      @include b(mobile) {
+          bottom: 70px;
+          top: auto;
+          width: 80%;
+          left: 50px;
+      }
     }
 
     p {
@@ -78,6 +105,9 @@
   &__image-qrcode {
     display: flex;
     justify-content: space-between;
+    @include b(mobile) {
+      flex-direction: column;
+    }
   }
 
   &__item-qrcode {
@@ -85,6 +115,10 @@
     align-items: center;
     flex-direction: column;
     width: 50%;
+    @include b(mobile) {
+      width: 100%;
+
+    }
     img {
       max-width: 100%;
       max-height: 100%;
@@ -94,10 +128,16 @@
       img {
         width: 100px;
         height: 100px;
+        @include b(mobile) {
+          display: none;
+        }
       }
     }
 
     a {
+      @include b(mobile) {
+        margin-bottom: 20px;
+      }
       img {
         width: 150px;
       }

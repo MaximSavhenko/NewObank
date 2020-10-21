@@ -3,8 +3,11 @@
 .digitalbank {
     padding: 75px 0;
     background: #FFE9F4;
-
+    @include b(mobile) {
+        padding: 50px 0;
+    }
     &__wrap {
+        
     }
 
     &__caption {
@@ -15,18 +18,34 @@
     &__item-wrapp{
         display: flex;
         margin: 0 -25px;
+        @include b(mobile) {
+            flex-direction: column;
+            margin: 0;
+        }
     }
 
     &__item {
+       width: 50%;
        display: flex;
        flex-direction: column;
        justify-content: space-between;
        padding: 0 25px;
+       @include b(mobile) {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+       }
         p {
             margin-bottom: 20px;
             line-height: 22,28px;
             font-weight: 700;
             color: #30394A;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @include b(mobile) {
+                padding-bottom: 30px;
+            }
         }
     }
 }

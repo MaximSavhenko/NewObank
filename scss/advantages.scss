@@ -10,6 +10,9 @@
     &__caption {
         text-align: center;
         margin-bottom: 70px;
+        @include b(mobile) {
+            margin-bottom: 40px;
+        }
     }
 
     &__item-wrap {
@@ -21,6 +24,10 @@
         align-items: center;
         max-width: 590px;
         margin: 0 auto 50px;
+        @include b(mobile) {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &__icon {
@@ -28,6 +35,12 @@
         width: 120px;
         height: 120px;
         flex: 0 0 120px;
+        @include b(mobile) {
+            margin-right: 0;
+            margin-bottom: 30px;
+            width: 100px;
+            height: 100px;
+        }
 
         img {
             width: 100%;

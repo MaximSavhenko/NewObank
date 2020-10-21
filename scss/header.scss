@@ -14,6 +14,9 @@
         display: flex;
         align-items: center;
         padding-right: 180px;
+        @include b(mobile) {
+            padding-right: 0;
+        }
     }
 
     &__wrap-nav {
@@ -202,7 +205,7 @@
         position: absolute;
         top: 31px;
         right: 0;
-        font-weight: 500;
+        font-weight: 500;     
         
         ul {
             border-radius: 5px;

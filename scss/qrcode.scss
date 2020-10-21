@@ -3,6 +3,9 @@
 
 .qrcode {
     padding-bottom: 120px;
+    @include b(mobile) {
+        padding-bottom: 48px;
+    }
     &__wrap {
         padding: 15px 0;
         border-top: 1px solid #F98972;
@@ -10,6 +13,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include b(mobile) {
+            flex-direction: column;
+            display: flex;
+        }
+        
     }
 
     &__item {
@@ -17,19 +25,28 @@
         flex-direction: column;
         align-items: center;
         width: 33.3333%;
+       
         p {
             font-size: 16px;
             font-family: 'Roboto';
             text-align: center;
             line-height: 19px;
+            @include b(mobile) {
+               order: 1; 
+            }
         }
     }
 
     &__image {
         text-align: center;
+        
+        
         p {
             width: 100px;
             display: inline-flex;
+            @include b(mobile) {
+                display: none;
+            }
         }
         a {
             width: 147px;

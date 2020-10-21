@@ -5,6 +5,9 @@
     h3 {
       margin-bottom: 80px;
       text-align: center;
+      @include b(mobile) {
+        margin-bottom: 46px;
+      }
     }
   
 
@@ -12,12 +15,20 @@
     display: flex;
     margin: 0 -15px;
     counter-reset: item;
+    @include b(mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
     width: 33.3333%;
     padding: 0 15px;
     position: relative;
+    @include b(mobile) {
+      width: 60%;
+      margin-bottom: 52px;
+    }
     &::before {
       content: counters(item, ".");
       counter-increment: item;
