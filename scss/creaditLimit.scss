@@ -2,6 +2,10 @@
 
 .creditLimit {
     padding-top: 67px;
+    @include b(mobile) {
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
     &__wrap {
         padding-top: 120px;
         border-top: 1px solid #F98972;
@@ -9,6 +13,8 @@
         align-items: center;
         @include b(mobile) {
             flex-direction: column;
+            border-top: 5px dotted #F98972;
+            padding-top: 60px;
         }
     }
 
@@ -38,12 +44,29 @@
             left: 0;
             width: 422px;
             border-top: 5px dotted #f8785e;
-          }
+            @include b(mobile) {
+                display: none;
+            }
+        }
+    }
+
+    &__caption-responsiv {
+        display: none;
+        @include b(mobile) {
+            display: block;
+            
+            h3 {
+                font-size: 26px;
+                font-weight: 700;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+        }
     }
 
     &__caption {
         @include b(mobile) {
-            order: 1;
+            display: none;
         }
         h3 {
             font-size: 32px;
@@ -54,5 +77,8 @@
     }
 
     &__descr {
+        @include b(mobile){
+            text-align: justify;
+        }
     }
 }

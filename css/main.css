@@ -691,6 +691,12 @@ select {
 .creditLimit {
   padding-top: 67px;
 }
+@media (max-width: 768px) {
+  .creditLimit {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+}
 .creditLimit__wrap {
   padding-top: 120px;
   border-top: 1px solid #F98972;
@@ -700,6 +706,8 @@ select {
 @media (max-width: 768px) {
   .creditLimit__wrap {
     flex-direction: column;
+    border-top: 5px dotted #F98972;
+    padding-top: 60px;
   }
 }
 .creditLimit__img {
@@ -734,8 +742,27 @@ select {
   border-top: 5px dotted #f8785e;
 }
 @media (max-width: 768px) {
+  .creditLimit__text-block::before {
+    display: none;
+  }
+}
+.creditLimit__caption-responsiv {
+  display: none;
+}
+@media (max-width: 768px) {
+  .creditLimit__caption-responsiv {
+    display: block;
+  }
+  .creditLimit__caption-responsiv h3 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
   .creditLimit__caption {
-    order: 1;
+    display: none;
   }
 }
 .creditLimit__caption h3 {
@@ -744,6 +771,12 @@ select {
   line-height: 38px;
   color: #30394A;
 }
+@media (max-width: 768px) {
+  .creditLimit__descr {
+    text-align: justify;
+  }
+}
+
 .cashback__wrap {
   display: flex;
   align-items: center;
@@ -940,6 +973,11 @@ select {
 }
 .table__table-wrap table p {
   margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .table__table-wrap thead {
+    display: none;
+  }
 }
 .table__table-wrap tr {
   height: 82px;
@@ -1141,7 +1179,7 @@ select {
 @media (max-width: 768px) {
   .qrcode__wrap {
     flex-direction: column;
-    display: flex;
+    padding: 30px 0;
   }
 }
 .qrcode__item {
@@ -1149,6 +1187,22 @@ select {
   flex-direction: column;
   align-items: center;
   width: 33.3333%;
+}
+@media (max-width: 768px) {
+  .qrcode__item {
+    width: 100%;
+  }
+  .qrcode__item:nth-child(1) {
+    margin-bottom: 20px;
+    order: 2;
+  }
+  .qrcode__item:nth-child(2) {
+    order: 1;
+  }
+  .qrcode__item:nth-child(3) {
+    margin-bottom: 20px;
+    order: 2;
+  }
 }
 .qrcode__item p {
   font-size: 16px;
@@ -1158,7 +1212,7 @@ select {
 }
 @media (max-width: 768px) {
   .qrcode__item p {
-    order: 1;
+    margin-bottom: 31px;
   }
 }
 .qrcode__image {
