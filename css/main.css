@@ -340,6 +340,10 @@ select {
     width: 100%;
     position: relative;
   }
+  .header__burger-position img {
+    position: relative;
+    z-index: 30;
+  }
 }
 .header__btn-menu {
   top: 10px;
@@ -369,7 +373,7 @@ select {
   position: absolute;
   top: 0;
   left: 0;
-  width: 30px;
+  width: 16px;
   height: 2px;
   z-index: 15;
   background-color: #000;
@@ -394,8 +398,11 @@ select {
 @media (max-width: 1024px) {
   .header__nav-list {
     flex-direction: column;
-    justify-content: center;
     width: 100%;
+    height: 100%;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 0 15px;
   }
 }
 @media (max-width: 1024px) {
@@ -435,15 +442,21 @@ select {
   transition: all 0.3s;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .header__nav-item:last-child::before {
+    right: 0;
+  }
+}
 .header__nav-item:hover:last-child::before {
   transform: rotate(-230deg);
   top: 7px;
 }
 @media (max-width: 1024px) {
   .header__nav-item {
-    margin-bottom: 20px;
-    font-size: 22px;
+    margin-bottom: 24px;
+    font-size: 18px;
     font-weight: 500;
+    width: 100%;
   }
 }
 .header__submenu {
@@ -462,12 +475,26 @@ select {
   width: 200px;
   transition: all 0.3s;
 }
+@media (max-width: 768px) {
+  .header__submenu {
+    padding-top: 40px;
+    padding-left: 32px;
+    width: 100%;
+    box-shadow: none;
+  }
+}
 .header__submenu li {
   font-size: 16px;
   font-weight: 500;
   line-height: 19px;
   color: #30394A;
   margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  .header__submenu li {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
 }
 .header__language {
   position: absolute;
@@ -499,6 +526,11 @@ select {
   position: relative;
   padding: 0 30px;
   padding-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .header__language-items {
+    z-index: 20;
+  }
 }
 .header__language-items:first-child::before {
   content: "";
@@ -968,6 +1000,13 @@ select {
   background: rgba(233, 118, 172, 0.9);
   box-shadow: 0px 4px 8px rgba(112, 112, 112, 0.15);
 }
+@media (max-width: 768px) {
+  .table__table-wrap::before {
+    background: none;
+    box-shadow: none;
+    border: none;
+  }
+}
 .table__table-wrap table {
   text-align: left;
 }
@@ -1026,6 +1065,19 @@ select {
   text-align: center;
   color: #fff;
   font-size: 16px;
+}
+@media (max-width: 768px) {
+  .table__table-wrap td:last-child {
+    color: #30394A;
+    font-weight: 500;
+    border-bottom: 1px solid #F3F3F3;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .table__table-wrap td:not(:first-child):not(:last-child) {
+    display: none;
+  }
 }
 .table__icon {
   display: inline-block;
