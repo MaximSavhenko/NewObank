@@ -55,6 +55,7 @@
     }
 
     &__caption-responsive {
+        display: none;
         @include b(mobile) {
             display: block;
             text-align: center;

@@ -865,6 +865,9 @@ select {
     display: none;
   }
 }
+.cashback__caption-responsive {
+  display: none;
+}
 @media (max-width: 768px) {
   .cashback__caption-responsive {
     display: block;

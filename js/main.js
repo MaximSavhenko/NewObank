@@ -1,7 +1,3 @@
-
-
-
-
 function toggleMobileMenu() {
 	var btnMenu = document.querySelector('.header__btn-menu'),
 		navWrap = document.querySelector('.header__wrap-nav');
